@@ -1,0 +1,70 @@
+.Login {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f0f0;
+  margin-left: 450px;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Adjust this if needed */
+}
+
+.container {
+  background-color: #fff;
+  width: 50%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+h2 {
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.message {
+  margin-top: 15px;
+  color: #ff0000;
+}
+
+.switch-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.switch-btn:hover {
+  background-color: #2980b9;
+}
