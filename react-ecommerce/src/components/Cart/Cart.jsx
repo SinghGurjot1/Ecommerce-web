@@ -7,7 +7,7 @@ import "./cart.css";
 import { useNavigate } from 'react-router-dom';
 
 const Cart = () => {
-  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount, clearCart } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   const navigate = useNavigate();
 
@@ -34,8 +34,17 @@ const Cart = () => {
     // For simplicity, this example just logs the payment details
     console.log('Payment Details:', paymentDetails);
 
-    // Set the order confirmation state to true
+    // Display the order confirmation message
     setOrderConfirmed(true);
+
+    // Clear the cart after 5 seconds
+    setTimeout(() => {
+      // Clear the cart
+      clearCart();
+
+      // Reset the order confirmation state
+      setOrderConfirmed(false);
+    }, 5000); // 5000 milliseconds = 5 seconds
 
     // Add further logic for completing the purchase
   };
@@ -95,7 +104,7 @@ const Cart = () => {
             </div>
           )}
           {/* Display order confirmation message if orderConfirmed is true */}
-          {orderConfirmed && <p>Order Confirmed!</p>}
+          {orderConfirmed && <p className='orderConfirmed'>Congratulations!! Your order is  Confirmed!</p>}
         </div>
       ) : (
         <h1>Your Cart is Empty</h1>
